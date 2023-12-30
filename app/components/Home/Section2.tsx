@@ -20,7 +20,7 @@ const Section2 = () => {
           </p>
           <p className='text-[18px] text-black font-normal'>
             Beyond the bricks and mortar lie the heartwarming stories of Tanglin
-            Halt's residents. These short films delve into the lives of
+            Halt&apos;s residents. These short films delve into the lives of
             individuals and families who weathered tumultuous times, triumphed
             over adversities, and progressed alongside the evolving landscape of
             Singapore.
