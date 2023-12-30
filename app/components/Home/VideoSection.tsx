@@ -2,7 +2,7 @@ import React from 'react';
 import Wrapper from '../shared/ComponentWrapper/ComponentWrapper';
 import Image from 'next/image';
 
-const Section5 = () => {
+const VideoSection = () => {
   return (
     <Wrapper style='bg-white-main py-16'>
       <div className='w-full grid gap-10 grid-cols-2'>
@@ -62,4 +62,4 @@ const videos = [
   },
 ];
 
-export default Section5;
+export default VideoSection;

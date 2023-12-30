@@ -4,7 +4,7 @@ import Wrapper from '../shared/ComponentWrapper/ComponentWrapper';
 const Hero = () => {
   return (
     <div>
-      <div className='w-full h-[calc(100vh-80px)] bg-[url(/assets/hero.png)] bg-cover bg-no-repeat bg-center relative'>
+      <div className='w-full h-[calc(100vh-0px)] bg-[url(/assets/hero.png)] bg-cover bg-no-repeat bg-center relative'>
         <div className='absolute inset-0 bg-black bg-opacity-50'></div>
         <Wrapper style='h-full relative'>
           {/* text on image ------->  */}
