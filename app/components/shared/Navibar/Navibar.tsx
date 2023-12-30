@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Navibar = () => {
   return (
-    <Wrapper style='h-[100px] w-full'>
+    <Wrapper style='h-[80px] w-full'>
       <div className='w-full h-full flex justify-between items-center'>
         {/* logo ----->  */}
         <div className='w-[60px] h-[60px] relative'>
@@ -22,7 +22,7 @@ const Navibar = () => {
                   item.path === '/'
                     ? 'text-red-main font-medium'
                     : 'text-white-light font-normal'
-                } text-[18px] capitalize relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:bg-red-main hover:after:w-full after:duration-200`}
+                } text-[16px] capitalize relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:bg-red-main hover:after:w-full after:duration-200`}
               >
                 {item.link}
               </Link>
@@ -55,6 +55,10 @@ const links = [
   {
     path: '#',
     link: 'contact us',
+  },
+  {
+    path: '#',
+    link: 'Our team',
   },
 ];
 
