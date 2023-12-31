@@ -8,7 +8,10 @@ const VideoSection = () => {
       <div className='w-full grid gap-6 sm:gap-0 lg:gap-10 grid-cols-1 lg:grid-cols-2'>
         {videos.map((item, index) => {
           return (
-            <div className='w-full flex justify-center items-center '>
+            <div
+              key={index}
+              className='w-full flex justify-center items-center '
+            >
               <button
                 key={index}
                 className='w-full max-w-[500px] lg:max-w-none bg-red-main/10 p-2 sm:p-4 shadow-xl rounded-md flex flex-col gap-4'
