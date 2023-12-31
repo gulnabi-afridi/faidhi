@@ -9,10 +9,10 @@ const Hero = () => {
         <Wrapper style='h-full relative'>
           {/* text on image ------->  */}
           <div className='flex flex-col gap-4 justify-center h-full items-start z-40 max-w-[900px]'>
-            <p className='text-[50px] leading-[60px] tracking-wide capitalize font-semibold text-white-main'>
+            <p className='text-[35px] sm:text-[50px] sm:text-left text-center  leading-[43px] sm:leading-[60px] tracking-wide capitalize font-semibold text-white-main'>
               Tanglin Halt: Beyond the Familiar Facade
             </p>
-            <p className='text-white-main/90 text-[22px] font-normal'>
+            <p className='text-white-main/90 sm:text-left text-center text-[18px] sm:text-[22px] font-normal'>
               Discover the untold tales of Tanglin Halt, a disappearing
               neighbourhood set for redevelopment in December 2021. Join us on a
               cinematic journey through four compelling short films that capture
