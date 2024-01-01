@@ -10,7 +10,7 @@ interface Props {
 }
 
 const AlumniCard = ({ img, text, isRight, secIndex }: Props) => {
-  const isEvenSection = secIndex % 2 === 1;
+  const isEvenSection = secIndex % 2 === 0;
   const bgColor = isEvenSection ? 'bg-white-main' : 'bg-[#efece8]';
   return (
     <div className={`w-full py-8 sm:py-16 ${bgColor}`}>

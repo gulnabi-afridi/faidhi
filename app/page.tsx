@@ -21,6 +21,8 @@ export default function Home() {
           />
         );
       })}
+      <VideoSection />
+
       {alumniData.map((item, index) => {
         return (
           <AlumniCard
@@ -32,8 +34,6 @@ export default function Home() {
           />
         );
       })}
-
-      <VideoSection />
     </>
   );
 }
@@ -53,8 +53,8 @@ const sectionsData = [
   },
   {
     img: '/assets/sec3.png',
-    title: 'Before Memories Fade',
-    des: ' As progress comes full circle, the iconic flats of Tanglin Halt are making way for redevelopment. We want to immortalise the stories and spirit of the people who called this neighbourhood home before they dissipate into the annals of history.',
+    title: 'Finders Keepers',
+    des: ' Explore the heartwarming tale of home and familial ties in this "kampung," where neighbours are more than just acquaintances—they are family.',
     isRight: true,
   },
 ];
