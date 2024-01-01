@@ -10,11 +10,11 @@ const VideoSection = () => {
           return (
             <div
               key={index}
-              className='w-full flex justify-center items-center '
+              className='w-full h-full flex justify-center items-center '
             >
               <button
                 key={index}
-                className='w-full max-w-[500px] lg:max-w-none bg-red-main/10 p-2 sm:p-4 shadow-xl rounded-md flex flex-col gap-4'
+                className='w-full h-full max-w-[500px] lg:max-w-none bg-[#efece8] p-2 sm:p-4 shadow-xl rounded-md flex flex-col gap-4'
               >
                 <div className='w-full h-[230px] sm:h-[300px]'>
                   <iframe
