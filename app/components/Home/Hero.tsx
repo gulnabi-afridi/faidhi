@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div>
       <div className='w-full h-[calc(100vh-0px)] bg-[url(/assets/hero.png)] bg-cover bg-no-repeat bg-center relative'>
-        <div className='absolute inset-0 bg-black bg-opacity-50'></div>
+        <div className='absolute inset-0 bg-black bg-opacity-60'></div>
         <Wrapper style='h-full relative'>
           {/* text on image ------->  */}
           <div className='flex flex-col gap-4 justify-center h-full items-start z-40 max-w-[900px]'>

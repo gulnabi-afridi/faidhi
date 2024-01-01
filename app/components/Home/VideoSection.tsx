@@ -14,7 +14,7 @@ const VideoSection = () => {
             >
               <button
                 key={index}
-                className='w-full h-full max-w-[500px] lg:max-w-none bg-[#efece8] p-2 sm:p-4 shadow-xl rounded-md flex flex-col gap-4'
+                className='w-full h-full max-w-[500px] lg:max-w-none bg-[#efece8] hover:bg-red-main/50 duration-300 p-2 sm:p-4 shadow-xl rounded-md flex flex-col gap-4'
               >
                 <div className='w-full h-[230px] sm:h-[300px]'>
                   <iframe
@@ -28,7 +28,7 @@ const VideoSection = () => {
                   ></iframe>
                 </div>
                 <div className='flex flex-col gap-1 items-start'>
-                  <p className='text-[18px] sm:text-[20px] text-black font-medium'>
+                  <p className='text-[18px] sm:text-[20px] text-black font-medium md:font-semibold'>
                     {item.title}
                   </p>
                   <p className='text-[14px] sm:text-[16px] text-black text-left font-normal'>
