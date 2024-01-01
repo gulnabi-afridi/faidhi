@@ -15,13 +15,15 @@ const AlumniCard = ({ img, text, isRight, secIndex }: Props) => {
   return (
     <div className={`w-full py-8 sm:py-16 ${bgColor}`}>
       <Wrapper>
-        <div className='w-full grid grid-cols-2 gap-4 md:gap-8 lg:gap-12'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-12'>
           <div
             className={`w-full flex justify-center items-center ${
-              isRight ? 'order-1' : 'order-2'
+              isRight ? 'md:order-1 order-2' : 'order-2 md:order-2'
             } `}
           >
-            <div className={`w-full max-w-[300px] h-[300px] relative `}>
+            <div
+              className={`w-full max-w-[250px] md:max-w-[300px]  h-[250px] md:h-[300px] relative `}
+            >
               <Image
                 src={img}
                 className='object-cover rounded-full'
@@ -32,7 +34,7 @@ const AlumniCard = ({ img, text, isRight, secIndex }: Props) => {
           </div>
           <div
             className={`w-full flex justify-center items-center ${
-              isRight ? 'order-2' : 'order-1'
+              isRight ? 'order-1 md:order-2' : 'order-1 md:order-1'
             } `}
           >
             <p className='text-[16px] text-center sm:text-[18px] text-black font-normal'>

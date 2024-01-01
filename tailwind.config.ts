@@ -18,6 +18,7 @@ const config: Config = {
         white: {
           main: '#ffffff',
           light: '#999',
+          dark: '#3c3c3c',
         },
         red: {
           main: '#dd3333',
