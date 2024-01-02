@@ -12,7 +12,7 @@ const Footer = () => {
             href={item.link}
             className={` hover:opacity-80 ${
               index === 1
-                ? 'w-[120px] sm:w-[150px] md:w-[230px] h-[70px] sm:h-[100px] md:h-[120px]'
+                ? 'w-[120px] sm:w-[150px] md:w-[240px] h-[70px] sm:h-[100px] md:h-[130px]'
                 : 'w-[50px] sm:w-[50px] md:w-[70px] h-[50px] md:h-[80px]'
             }  relative`}
           >

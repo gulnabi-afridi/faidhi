@@ -14,11 +14,11 @@ const Hero = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2600,
     cssEase: 'linear',
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
-    pauseOnHover: false,
+    pauseOnHover: true,
   };
 
   function CustomNextArrow(props: any) {
