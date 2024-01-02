@@ -46,22 +46,22 @@ const VideoSection = () => {
 
 const videos = [
   {
-    video: 'https://www.youtube.com/embed/81bLdOJwteA?si=qc8jFPWgoTLrfSUd',
+    video: 'https://www.youtube.com/embed/VWpYbdsrL38',
     title: 'Finders Keepers',
     des: 'Explore the heartwarming tale of home and familial ties in this "kampung," where neighbours are more than just acquaintances—they are family.',
   },
   {
-    video: 'https://www.youtube.com/embed/XRQgCU_ZnJM?si=r8NO5g-aWxnObXRG',
+    video: 'https://www.youtube.com/embed/DXUsXEyrc2w',
     title: 'The Lontong Queen',
     des: 'Indulge in a story of family, food, grit, and perseverance, featuring one of Singapores iconic dishes. Witness the journey of a culinary legend in the heart of Tanglin Halt.',
   },
   {
-    video: 'https://www.youtube.com/embed/-ZscZv-IMyI?si=mbtS3u96pGHZlW7J',
+    video: 'https://www.youtube.com/embed/xXB65UT9PBI',
     title: 'A Peace Of You',
     des: 'Experience a narrative of childhood, growth, friendship, and community. Join us as we unveil the bonds that shaped lives within the vibrant tapestry of Tanglin Halt.',
   },
   {
-    video: 'https://www.youtube.com/embed/4eIDBV4Mpek?si=gDosSmltytNHcr0x',
+    video: 'https://www.youtube.com/embed/tk7mZnsStpg',
     title: 'Entangled',
     des: 'Immerse yourself in a story of resilience, racial harmony, and service. Discover the nostalgia of a neighbourhood haunt that embodies the collective memories of Tanglin Halt.',
   },
