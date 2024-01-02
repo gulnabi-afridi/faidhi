@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className='w-full min-h-[220px] md:min-h-[280px] sm:pt-0 pt-10 bg-[#efece8] grid grid-cols-1 sm:grid-cols-2 justify-center items-center'>
+    <div className='w-full min-h-[220px] md:min-h-[280px] sm:pt-0 pt-10 bg-[#efece8] grid grid-cols-1 sm:grid-cols-2 justify-center items-center mt-16'>
       {logos.map((item, index) => {
         return (
           <div key={index} className='w-full flex justify-center items-center'>

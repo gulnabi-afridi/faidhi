@@ -1,21 +1,58 @@
 'use client';
-import HeroCard from './HeroCard';
+import React, { useState } from 'react';
+import HeroCard from './Cards/HeroCard';
 import Slider from 'react-slick';
+import { MdNavigateNext } from 'react-icons/md';
 
 const Hero = () => {
+  const [navigateSlideItem, setNavigateSlideItem] = useState(true);
+
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     cssEase: 'linear',
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    pauseOnHover: false,
   };
 
+  function CustomNextArrow(props: any) {
+    const { onClick } = props;
+    return (
+      <div
+        onClick={() => {
+          onClick();
+          setNavigateSlideItem(true);
+        }}
+        className='absolute right-0 w-[15px] sm:w-[30px] h-[35px] sm:h-[56px] rounded-l-[10px] bg-red-main/80 hover:opacity-80 cursor-pointer top-[43%] flex justify-center items-center'
+      >
+        <MdNavigateNext className='text-[20px] sm:text-[32px] text-white-main/70' />
+      </div>
+    );
+  }
+
+  function CustomPrevArrow(props: any) {
+    const { onClick } = props;
+    return (
+      <div
+        onClick={() => {
+          onClick();
+          setNavigateSlideItem(true);
+        }}
+        className='absolute left-0 w-[15px] sm:w-[30px] h-[35px] sm:h-[56px] z-20 rounded-r-[10px] bg-red-main/80 hover:opacity-80 cursor-pointer top-[45%] flex justify-center items-center'
+      >
+        <MdNavigateNext className='text-[20px] sm:text-[32px] text-white-main/70 rotate-180' />
+      </div>
+    );
+  }
+
   return (
-    <div className='w-full lg:h-screen md:h-[50vh] sm:h-[40vh] h-[180px] '>
+    <div className='w-full sm:h-screen overflow-hidden h-[50vh] '>
       <Slider {...settings}>
         {heroCardData.map((item, index) => {
           return (
