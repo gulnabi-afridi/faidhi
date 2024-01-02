@@ -28,9 +28,9 @@ const Alumni = () => {
           onClick();
           setNavigateSlideItem(true);
         }}
-        className='absolute right-0 w-[26px] h-[26px] rounded-full bg-red-main hover:opacity-80 cursor-pointer top-1/2 flex justify-center items-center'
+        className='absolute right-0 w-[20px] sm:w-[26px] h-[20px] sm:h-[26px] rounded-full bg-red-main hover:opacity-80 cursor-pointer top-[47%] flex justify-center items-center'
       >
-        <MdNavigateNext className='text-[20px] text-white-main' />
+        <MdNavigateNext className='text-[16px] sm:text-[20px] text-white-main' />
       </div>
     );
   }
@@ -43,15 +43,15 @@ const Alumni = () => {
           onClick();
           setNavigateSlideItem(true);
         }}
-        className='w-[26px] cursor-pointer left-0 top-1/2 z-30 absolute h-[26px] hover:opacity-80 rounded-full bg-red-main flex justify-center items-center'
+        className='w-[20px] sm:w-[26px] h-[20px] sm:h-[26px] cursor-pointer left-0 top-[47%] z-30 absolute hover:opacity-80 rounded-full bg-red-main flex justify-center items-center'
       >
-        <MdNavigateNext className='text-[20px] text-white-main rotate-180' />
+        <MdNavigateNext className='text-[16px] sm:text-[20px] text-white-main rotate-180' />
       </div>
     );
   }
 
   return (
-    <div className='w-full max-w-[1200px]  overflow-hidden m-auto py-8 sm:py-16 '>
+    <div className='w-full max-w-[1200px] xl:px-0 px-4  overflow-hidden m-auto py-8 sm:py-16 '>
       <Slider {...settings}>
         {alumniData.map((item, index) => {
           return <AlumniCard key={index} img={item.img} text={item.text} />;
