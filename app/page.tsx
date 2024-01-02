@@ -1,63 +1,21 @@
-import Hero from './components/Home/Hero';
 import SectionCard from './components/Home/SectionCard';
 import VideoSection from './components/Home/VideoSection';
 import Image from 'next/image';
 import Wrapper from './components/shared/ComponentWrapper/ComponentWrapper';
 import AlumniCard from './components/Home/AlumniCard';
+import Hero from './components/Home/Hero';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      {sectionsData.map((item, index) => {
-        return (
-          <SectionCard
-            key={index}
-            img={item.img}
-            title={item.title}
-            des={item.des}
-            secIndex={index + 1}
-            isRight={item.isRight}
-          />
-        );
-      })}
       <VideoSection />
-
       {alumniData.map((item, index) => {
-        return (
-          <AlumniCard
-            key={index}
-            secIndex={index + 1}
-            img={item.img}
-            isRight={item.isRight}
-            text={item.text}
-          />
-        );
+        return <AlumniCard key={index} img={item.img} text={item.text} />;
       })}
     </>
   );
 }
-
-const sectionsData = [
-  {
-    img: '/assets/sec1.png',
-    title: 'Unearthing Human Stories',
-    des: ' Beyond the bricks and mortar lie the heartwarming stories of Tanglin Halt&apos;s residents. These short films delve into the lives of individuals and families who weathered tumultuous times, triumphed over adversities, and progressed alongside the evolving landscape of Singapore.',
-    isRight: true,
-  },
-  {
-    img: '/assets/sec2.jpeg',
-    title: 'Before Memories Fade',
-    des: 'As progress comes full circle, the iconic flats of Tanglin Halt are making way for redevelopment. We want to immortalise the stories and spirit of the people who called this neighbourhood home before they dissipate into the annals of history.',
-    isRight: false,
-  },
-  {
-    img: '/assets/sec3.png',
-    title: 'Finders Keepers',
-    des: ' Explore the heartwarming tale of home and familial ties in this "kampung," where neighbours are more than just acquaintances—they are family.',
-    isRight: true,
-  },
-];
 
 const alumniData = [
   {
