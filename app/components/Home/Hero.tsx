@@ -1,105 +1,42 @@
 'use client';
-import React, { useState } from 'react';
-import HeroCard from './Cards/HeroCard';
-import Slider from 'react-slick';
-import { MdNavigateNext } from 'react-icons/md';
+import React from 'react';
+import Wrapper from '../shared/ComponentWrapper/ComponentWrapper';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 const Hero = () => {
-  const [navigateSlideItem, setNavigateSlideItem] = useState(true);
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
-    cssEase: 'linear',
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
-    pauseOnHover: true,
-  };
-
-  function CustomNextArrow(props: any) {
-    const { onClick } = props;
-    return (
-      <div
-        onClick={() => {
-          onClick();
-          setNavigateSlideItem(true);
-        }}
-        className='absolute right-0 w-[15px] sm:w-[30px] h-[35px] sm:h-[56px] rounded-l-[10px] bg-red-main/80 hover:opacity-80 cursor-pointer top-[43%] flex justify-center items-center'
-      >
-        <MdNavigateNext className='text-[20px] sm:text-[32px] text-white-main/70' />
-      </div>
-    );
-  }
-
-  function CustomPrevArrow(props: any) {
-    const { onClick } = props;
-    return (
-      <div
-        onClick={() => {
-          onClick();
-          setNavigateSlideItem(true);
-        }}
-        className='absolute left-0 w-[15px] sm:w-[30px] h-[35px] sm:h-[56px] z-20 rounded-r-[10px] bg-red-main/80 hover:opacity-80 cursor-pointer top-[45%] flex justify-center items-center'
-      >
-        <MdNavigateNext className='text-[20px] sm:text-[32px] text-white-main/70 rotate-180' />
-      </div>
-    );
-  }
-
   return (
-    <div className='w-full sm:h-screen overflow-hidden h-[50vh] '>
-      <Slider {...settings}>
-        {heroCardData.map((item, index) => {
-          return (
-            <HeroCard
-              key={index}
-              bgImage={item.image}
-              title={item.title}
-              subTitle={item.subTitle}
-            />
-          );
-        })}
-      </Slider>
+    <div>
+      <div className='w-full h-[calc(100vh-0px)] bg-[url(/assets/sec.png)] bg-cover bg-no-repeat bg-center relative'>
+        <div className='absolute inset-0 bg-black bg-opacity-50'></div>
+        <Wrapper style='h-full relative'>
+          {/* text on image ------->  */}
+          <Fade
+            duration={1500}
+            delay={500}
+            triggerOnce
+            className='flex justify-start h-full items-center'
+          >
+            <div className='flex flex-col gap-4 justify-center h-full items-start z-40 max-w-[900px]'>
+              <Slide direction='right' duration={1500} triggerOnce>
+                <p className='text-[50px] leading-[60px] tracking-wide capitalize font-semibold text-white-main'>
+                  Beyond the Familiar Facade
+                </p>
+              </Slide>
+              <Slide direction='right' duration={1500} delay={500} triggerOnce>
+                <p className='text-white-main/90 text-[22px] font-normal'>
+                  Discover the untold tales of Tanglin Halt, a disappearing
+                  neighbourhood set for redevelopment in December 2021. Join us
+                  on a cinematic journey through four compelling short films
+                  that capture the essence of honour, heritage, and the
+                  resilient spirit that defines this historic community.
+                </p>
+              </Slide>
+            </div>
+          </Fade>
+        </Wrapper>
+      </div>
     </div>
   );
 };
-
-const heroCardData = [
-  {
-    image: 'bg-[url(/assets/sec.png)]',
-    title: 'Beyond the Familiar Facade',
-    subTitle: [
-      'Discover the untold tales of Tanglin Halt, a disappearing neighbourhood set for redevelopment in December 2021. Join us on a cinematic journey through four compelling short films that capture the essence of honour, heritage, and the resilient spirit that defines this historic community.',
-    ],
-  },
-  {
-    image: 'bg-[url(/assets/sec1.png)]',
-    title: 'Unearthing Human Stories',
-    subTitle: [
-      "Beyond the bricks and mortar lie the heartwarming stories of Tanglin Halt's residents. These short films delve into the lives of individuals and families who weathered tumultuous times, triumphed over adversities, and progressed alongside the evolving landscape of Singapore.",
-    ],
-  },
-  {
-    image: 'bg-[url(/assets/sec3.png)]',
-    title: 'Before Memories Fade',
-    subTitle: [
-      'As progress comes full circle, the iconic flats of Tanglin Halt are making way for redevelopment. We want to immortalise the stories and spirit of the people who called this neighbourhood home before they dissipate into the annals of history.',
-    ],
-  },
-  {
-    image: 'bg-[url(/assets/sec2.jpeg)]',
-    title: 'The Honour Film Initiative',
-    subTitle: [
-      'The Tanglin Halt series is an integral part of our mission to empower young, emerging filmmakers in bringing untold stories to life.',
-      'The Honour Film Initiative enables emerging filmmakers to tell stories that otherwise may never get told. Stories of honour in its various dimensions: Integrity, respect, resilience, thrift and hard work.',
-      'Selected short films are presented at the Honour Film Screening twice a year to honour the hidden, unsung heroes in our midst who embody the value of honour.',
-    ],
-  },
-];
 
 export default Hero;
