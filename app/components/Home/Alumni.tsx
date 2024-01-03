@@ -11,7 +11,7 @@ const Alumni = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 800,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     slidesToShow: 1,

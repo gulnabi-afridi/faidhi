@@ -14,7 +14,7 @@ const Hero = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2600,
+    autoplaySpeed: 3000,
     cssEase: 'linear',
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
@@ -85,14 +85,14 @@ const heroCardData = [
     ],
   },
   {
-    image: 'bg-[url(/assets/sec2.jpeg)]',
+    image: 'bg-[url(/assets/sec3.png)]',
     title: 'Before Memories Fade',
     subTitle: [
       'As progress comes full circle, the iconic flats of Tanglin Halt are making way for redevelopment. We want to immortalise the stories and spirit of the people who called this neighbourhood home before they dissipate into the annals of history.',
     ],
   },
   {
-    image: 'bg-[url(/assets/sec3.png)]',
+    image: 'bg-[url(/assets/sec2.jpeg)]',
     title: 'The Honour Film Initiative',
     subTitle: [
       'The Tanglin Halt series is an integral part of our mission to empower young, emerging filmmakers in bringing untold stories to life.',
