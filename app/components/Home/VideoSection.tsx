@@ -11,11 +11,8 @@ const VideoSection = () => {
       <div className='w-full grid gap-6 sm:gap-0 lg:gap-10 grid-cols-1 lg:grid-cols-2'>
         {videos.map((item, index) => {
           return (
-            <Fade duration={1500} delay={index * 500} triggerOnce>
-              <div
-                key={index}
-                className='w-full h-full flex justify-center items-center'
-              >
+            <Fade key={index} duration={1500} delay={index * 500} triggerOnce>
+              <div className='w-full h-full flex justify-center items-center'>
                 <Slide direction='up' duration={1500} triggerOnce>
                   <button
                     key={index}
