@@ -15,17 +15,20 @@ interface Props {
 const SectionCard = ({ img, title, des, secIndex }: Props) => {
   const isEvenSection = secIndex % 2 === 0;
   const bgColor = isEvenSection ? 'bg-white-main' : 'bg-black/10';
+  console.log(isEvenSection);
 
   return (
     <div className={`w-full py-16 ${bgColor}`}>
       <Wrapper>
         <div className='w-full grid grid-cols-2 gap-12'>
-          <Zoom duration={2000} triggerOnce>
-            <div
-              className={`w-full h-[400px] relative ${
-                isEvenSection ? 'order-2' : 'order-1'
-              }`}
-            >
+          <Zoom
+            duration={2000}
+            triggerOnce
+            className={`
+           ${isEvenSection ? 'order-2' : 'order-1'}
+          `}
+          >
+            <div className={`w-full h-[400px] `}>
               <Image
                 src={img}
                 className='object-cover rounded-lg'
