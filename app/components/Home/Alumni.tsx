@@ -11,7 +11,8 @@ const Alumni = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 800,
+    speed: 500,
+    fade: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     slidesToShow: 1,
@@ -71,7 +72,7 @@ const alumniData = [
   },
   {
     img: '/assets/jasmine.jpeg',
-    text: '“Honour is a value that can be very powerful in changing somebody’s life.” - Brenda Er, Director of Tanglin Halt Series',
+    text: '“Honour is not just about the successes of people, but the struggles to bring them to who they are today.” - Jasmine Teh, Producer of Tanglin Halt Series',
     isRight: false,
   },
 ];

@@ -9,6 +9,7 @@ const Footer = () => {
         return (
           <Link
             key={index}
+            target='/blank'
             href={item.link}
             className={` hover:opacity-80 ${
               index === 1
@@ -26,11 +27,11 @@ const Footer = () => {
 
 const logos = [
   {
-    link: '#',
+    link: 'https://honour.sg/',
     src: '/assets/logo.png',
   },
   {
-    link: '#',
+    link: 'https://www.nhb.gov.sg/',
     src: '/assets/logo2.png',
   },
 ];
