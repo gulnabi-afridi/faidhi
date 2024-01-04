@@ -15,7 +15,6 @@ interface Props {
 const SectionCard = ({ img, title, des, secIndex }: Props) => {
   const isEvenSection = secIndex % 2 === 0;
   const bgColor = isEvenSection ? 'bg-white-main' : 'bg-black/10';
-  console.log(isEvenSection);
 
   return (
     <div className={`w-full py-16 ${bgColor}`}>
