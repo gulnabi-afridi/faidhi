@@ -4,6 +4,7 @@ import './globals.css';
 import Footer from './components/shared/Footer/Footer';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import ContactUs from './components/shared/ContactUs/ContactUs';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -20,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={montserrat.className}>
+        {/* <Navibar /> */}
         {children}
+        <ContactUs />
         <Footer />
       </body>
     </html>

@@ -1,26 +1,61 @@
 import VideoSection from './components/Home/VideoSection';
-import AlumniCard from './components/Home/Cards/AlumniCard';
 import Hero from './components/Home/Hero';
-import Alumni from './components/Home/Alumni';
 import SectionCard from './components/Home/SectionCard';
+import ContactUs from './components/shared/ContactUs/ContactUs';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      {sectionsData.map((item, index) => {
-        return (
-          <SectionCard
-            key={index}
-            img={item.image}
-            title={item.title}
-            des={item.subTitle}
-            secIndex={index + 1}
-          />
-        );
-      })}
-      <VideoSection />
-      <Alumni />
+      {/* videos portion 1 ------------>  */}
+      <div className='w-full grid gap-4 sm:gap-8 grid-cols-1'>
+        {videoPortion1.map((item, index) => {
+          return (
+            <VideoSection
+              key={index}
+              index={index}
+              title={item.title}
+              des={item.des}
+              video={item.video}
+            />
+          );
+        })}
+      </div>
+      {/* body 1 ==========> */}
+      <SectionCard
+        img={sectionsData[0].image}
+        title={sectionsData[0].title}
+        des={sectionsData[0].subTitle}
+        secIndex={0}
+      />
+      {/* videos portion 2 ------------>  */}
+      <div className='w-full grid gap-4 sm:gap-8 grid-cols-1  '>
+        {videoPortion2.map((item, index) => {
+          return (
+            <VideoSection
+              key={index}
+              index={index}
+              title={item.title}
+              des={item.des}
+              video={item.video}
+            />
+          );
+        })}
+      </div>
+      {/* body 2 ==========> */}
+      <SectionCard
+        img={sectionsData[1].image}
+        title={sectionsData[1].title}
+        des={sectionsData[1].subTitle}
+        secIndex={2}
+      />
+      {/* body 3 ==========> */}
+      <SectionCard
+        img={sectionsData[2].image}
+        title={sectionsData[2].title}
+        des={sectionsData[2].subTitle}
+        secIndex={3}
+      />
     </>
   );
 }
@@ -30,23 +65,47 @@ const sectionsData = [
     image: '/assets/sec1.png',
     title: 'Unearthing Human Stories',
     subTitle: [
-      "Beyond the bricks and mortar lie the heartwarming stories of Tanglin Halt's residents. These short films delve into the lives of individuals and families who weathered tumultuous times, triumphed over adversities, and progressed alongside the evolving landscape of Singapore.",
+      'Delve into the lives of residents who weathered tumultuous times and progressed alongside the evolving landscape of Singapore.',
     ],
   },
   {
-    image: '/assets/sec3.webp',
+    image: '/assets/sec3.png',
     title: 'Before Memories Fade',
     subTitle: [
-      'As progress comes full circle, the iconic flats of Tanglin Halt are making way for redevelopment. We want to immortalise the stories and spirit of the people who called this neighbourhood home before they dissipate into the annals of history.',
+      'To preserve the stories and spirit of the people who called Tanglin Halt home.',
     ],
   },
   {
-    image: '/assets/sec2.jpeg',
+    image: '/assets/sec2.jpg',
     title: 'The Honour Film Initiative',
     subTitle: [
-      'The Tanglin Halt series is an integral part of our mission to empower young, emerging filmmakers in bringing untold stories to life.',
       'The Honour Film Initiative enables emerging filmmakers to tell stories that otherwise may never get told. Stories of honour in its various dimensions: Integrity, respect, resilience, thrift and hard work.',
-      'Selected short films are presented at the Honour Film Screening twice a year to honour the hidden, unsung heroes in our midst who embody the value of honour.',
     ],
+  },
+];
+
+const videoPortion1 = [
+  {
+    video: 'https://www.youtube.com/embed/xXB65UT9PBI',
+    title: 'Finders Keepers',
+    des: 'Explore the heartwarming tale of home and familial ties in this "kampung," where neighbours are more than just acquaintances - they are family.',
+  },
+  {
+    video: 'https://www.youtube.com/embed/DXUsXEyrc2w',
+    title: 'The Lontong Queen',
+    des: "Indulge in a story of family, food, grit, and perseverance, featuring one of Singapore's iconic dishes. Witness the journey of a culinary legend in the heart of Tanglin Halt.",
+  },
+];
+
+const videoPortion2 = [
+  {
+    video: 'https://www.youtube.com/embed/tk7mZnsStpg',
+    title: 'A Peace Of You',
+    des: 'Experience a narrative of childhood, growth, friendship, and community as we unveil the bonds that shaped lives within the vibrant tapestry of Tanglin Halt. ',
+  },
+  {
+    video: 'https://www.youtube.com/embed/VWpYbdsrL38',
+    title: 'Entangled',
+    des: 'A story of resilience, racial harmony and service, featuring a nostalgic neighbourhood haunt.',
   },
 ];
