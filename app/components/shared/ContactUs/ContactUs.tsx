@@ -5,7 +5,7 @@ import { Fade, Slide } from 'react-awesome-reveal';
 
 const ContactUs = () => {
   return (
-    <div className='w-full h-[220px] sm:h-[350px] md:h-[400px] bg-[url(/assets/contactUs.jpeg)] bg-cover flex flex-col justify-center items-center bg-no-repeat relative bg-center'>
+    <div className='w-full h-[220px] sm:h-[350px] md:h-[400px] bg-[url(/assets/contactUs.webp)] bg-cover flex flex-col justify-center items-center bg-no-repeat relative bg-center'>
       <div className='absolute inset-0 bg-black bg-opacity-30'></div>
       <Fade duration={1000} triggerOnce>
         <div className='flex flex-col gap-0 md:gap-0 relative w-full justify-center items-center px-8'>
