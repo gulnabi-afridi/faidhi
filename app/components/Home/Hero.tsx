@@ -30,7 +30,7 @@ const Hero = () => {
                       className={`${
                         index === 1
                           ? 'w-[180px] sm:w-[250px] h-[110px] sm:h-[150px] -mt-4 sm:-mt-8'
-                          : 'w-[80px] sm:w-[110px] h-[80px] sm:h-[100px]'
+                          : 'w-[80px] sm:w-[110px] h-[80px] sm:h-[100px] opacity-60'
                       } relative`}
                     >
                       <Image

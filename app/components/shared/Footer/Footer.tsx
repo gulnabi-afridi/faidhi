@@ -5,39 +5,58 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Fade, Zoom, Slide } from 'react-awesome-reveal';
 import Wrapper from '../ComponentWrapper/ComponentWrapper';
+import { FaFacebook } from 'react-icons/fa';
+import { PiInstagramLogoFill } from 'react-icons/pi';
+import { FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <div className='w-full py-8 sm:py-12 bg-black'>
       <Wrapper style=' h-full'>
-        <Fade duration={1000} triggerOnce>
-          <div className='w-full h-full flex gap-[5px] sm:gap-[7px] flex-col'>
-            {footerData.map((item, index) => (
-              <Slide
-                direction='up'
-                duration={1000}
-                delay={index * 100}
-                triggerOnce
-                key={index}
-              >
-                {index + 1 === footerData.length ? (
-                  <a
-                    href={`mailto:${item}`}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='text-[14px] sm:text-[17px] text-white-main font-semibold'
-                  >
-                    Email: <span className='opacity-80'>{item}</span>
-                  </a>
-                ) : (
-                  <p className='text-[14px] sm:text-[17px] text-white-main font-semibold'>
-                    {item}
-                  </p>
-                )}
-              </Slide>
-            ))}
+        <div className='w-full flex justify-between items-start'>
+          <Fade duration={1000} triggerOnce className='w-full'>
+            <div className='w-full h-full flex gap-[5px] sm:gap-[7px] flex-col'>
+              {footerData.map((item, index) => (
+                <Slide
+                  direction='up'
+                  duration={1000}
+                  delay={index * 100}
+                  triggerOnce
+                  key={index}
+                >
+                  {index + 1 === footerData.length ? (
+                    <a
+                      href={`mailto:${item}`}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='text-[14px] sm:text-[17px] text-white-main font-semibold'
+                    >
+                      Email: <span className='opacity-80'>{item}</span>
+                    </a>
+                  ) : (
+                    <p className='text-[14px] sm:text-[17px] text-white-main font-semibold'>
+                      {item}
+                    </p>
+                  )}
+                </Slide>
+              ))}
+            </div>
+          </Fade>
+          {/* social icons ======>  */}
+          <div className='flex justify-center items-center gap-5'>
+            {socialIcons.map((item, index) => {
+              return (
+                <Link
+                  className='hover:opacity-80'
+                  href={item.path}
+                  target='blank'
+                >
+                  {item.icon}
+                </Link>
+              );
+            })}
           </div>
-        </Fade>
+        </div>
       </Wrapper>
     </div>
   );
@@ -51,6 +70,27 @@ const footerData = [
   'Singapore 068809',
   'Telephone: +65 6438 8175',
   'admin@honour.sg',
+];
+
+const socialIcons = [
+  {
+    icon: (
+      <FaFacebook className='text-[30px] text-white-main hover:text-red-main duration-200' />
+    ),
+    path: ' https://www.facebook.com/HonourOurSingapore',
+  },
+  {
+    icon: (
+      <FaYoutube className='text-[34px] text-white-main hover:text-red-main duration-200' />
+    ),
+    path: 'https://www.youtube.com/@honoursingapore',
+  },
+  {
+    icon: (
+      <PiInstagramLogoFill className='text-[32px] text-white-main hover:text-red-main duration-200' />
+    ),
+    path: 'https://www.instagram.com/HonourSingapore/',
+  },
 ];
 
 {

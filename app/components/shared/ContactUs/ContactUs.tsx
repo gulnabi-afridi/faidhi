@@ -6,7 +6,7 @@ import { Fade, Slide, Zoom } from 'react-awesome-reveal';
 
 const ContactUs = () => {
   return (
-    <div className='w-full h-[300px] sm:h-[350px] md:h-[400px] bg-[url(/assets/contactUs.webp)] bg-cover flex flex-col justify-center items-center bg-no-repeat relative bg-center'>
+    <div className='w-full py-12 sm:py-28 bg-[url(/assets/contactUs.webp)] bg-cover flex flex-col justify-center items-center bg-no-repeat relative bg-center'>
       <div className='absolute inset-0 bg-black bg-opacity-30'></div>
       <Fade duration={1000} triggerOnce>
         <div className='flex flex-col gap-1 sm:gap-6 relative w-full justify-center items-center px-8'>
@@ -21,21 +21,36 @@ const ContactUs = () => {
               collaborate with, so go on and get in touch with us!
             </p>
           </Slide>
-
-          <Zoom
-            duration={1000}
-            delay={1000}
-            triggerOnce
-            className='mt-6 sm:mt-3'
-          >
-            <Link
-              href='https://honour.sg/initiatives/'
-              target='blank'
-              className='px-6 py-3 rounded-[60px] tracking-wider hover:opacity-80 active:translate-y-[2px] text-white-main bg-red-main font-medium text-[18px]'
+          <div className='flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-4'>
+            <Zoom
+              duration={1000}
+              delay={1000}
+              triggerOnce
+              className='mt-4 md:mt-1'
             >
-              Connect Us
-            </Link>
-          </Zoom>
+              <Link
+                href='https://honour.sg/initiatives/'
+                target='blank'
+                className='px-6 h-[40px] sm:h-[50px] flex justify-center items-center rounded-[60px] tracking-wider hover:opacity-80 active:translate-y-[2px] text-white-main bg-red-main font-medium text-[16px] sm:text-[18px]'
+              >
+                Learn More
+              </Link>
+            </Zoom>
+            <Zoom
+              duration={1000}
+              delay={1200}
+              triggerOnce
+              className='mt-4 md:mt-1'
+            >
+              <Link
+                href='https://honour.sg/contact/'
+                target='blank'
+                className='px-6 h-[40px] text-center sm:h-[50px] mt-0 md:mt-1 flex justify-center items-center rounded-[60px] tracking-wider hover:opacity-80 active:translate-y-[2px] text-white-main bg-red-main font-medium text-[16px] sm:text-[18px]'
+              >
+                The Honour Film Initiative
+              </Link>
+            </Zoom>
+          </div>
         </div>
       </Fade>
     </div>
