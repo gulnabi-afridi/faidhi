@@ -37,10 +37,13 @@ const Hero = () => {
                 ))}
               </div>
             </Zoom>
-
+            <p className='text-white-main text-[22px] sm:text-[26px] sm:text-left text-center leading-[30px] sm:leading-[36px] font-medium opacity-80'>
+              With support from the National Heritage Board, Honour (Singapore)
+              presents:
+            </p>
             <Slide direction='right' duration={1500} triggerOnce>
-              <p className='text-[50px] sm:text-left text-center leading-[60px] tracking-wide capitalize font-semibold text-white-main'>
-                The Tanglin Halt Stories
+              <p className='text-[40px] sm:text-[50px] sm:text-left text-center leading-[45px] sm:leading-[60px] tracking-wide capitalize font-semibold text-white-main'>
+                The Tanglin Halt Stories:
               </p>
             </Slide>
 

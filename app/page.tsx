@@ -21,13 +21,6 @@ export default function Home() {
           );
         })}
       </div>
-      {/* body 1 ==========> */}
-      <SectionCard
-        img={sectionsData[0].image}
-        title={sectionsData[0].title}
-        des={sectionsData[0].subTitle}
-        secIndex={0}
-      />
       {/* videos portion 2 ------------>  */}
       <div className='w-full grid gap-4 sm:gap-8 grid-cols-1  '>
         {videoPortion2.map((item, index) => {
@@ -42,6 +35,13 @@ export default function Home() {
           );
         })}
       </div>
+      {/* body 1 ==========> */}
+      <SectionCard
+        img={sectionsData[0].image}
+        title={sectionsData[0].title}
+        des={sectionsData[0].subTitle}
+        secIndex={0}
+      />
     </>
   );
 }
