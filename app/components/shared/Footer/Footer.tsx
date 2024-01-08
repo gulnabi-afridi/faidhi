@@ -47,6 +47,7 @@ const Footer = () => {
             {socialIcons.map((item, index) => {
               return (
                 <Link
+                  key={index}
                   className='hover:opacity-80'
                   href={item.path}
                   target='blank'
