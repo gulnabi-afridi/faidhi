@@ -18,33 +18,22 @@ const Hero = () => {
           className='flex justify-start h-full items-center'
         >
           <div className='flex flex-col gap-3 justify-center h-full items-start z-40 w-full max-w-[900px]'>
-            {/* Animated Logos */}
-            <Bounce duration={2000} triggerOnce className='w-full'>
-              <div className='w-full flex justify-center sm:justify-start items-center'>
-                {logos.map((item, index) => (
-                  <Link
-                    href={item.path}
-                    target='blank'
-                    key={index}
-                    className={`relative hover:scale-110 transition-transform duration-300 ${
-                      index === 1
-                        ? 'w-[180px] sm:w-[230px] h-[110px] sm:h-[120px] -mt-2 sm:-mt-6'
-                        : 'w-[80px] sm:w-[80px] h-[80px] sm:h-[90px] opacity-60'
-                    }`}
-                  >
-                    <Image src={item.img} fill alt='' className='object-fill' />
-                  </Link>
-                ))}
-              </div>
-            </Bounce>
             {/* Text with Fade and Slide animations */}
-            <p className='text-white-main text-[22px] sm:text-[26px] sm:text-left text-center leading-[30px] sm:leading-[36px] font-medium opacity-80'>
-              With support from the National Heritage Board, Honour (Singapore)
-              presents:
+            <p className='text-white-main text-[22px] sm:text-[26px] sm:text-left text-center leading-[30px] sm:leading-[36px] font-medium '>
+              <span className='opacity-80'> With support from the </span>{' '}
+              <Link
+                href='https://www.nhb.gov.sg/'
+                target='blank'
+                className='text-[#8d774f] underline opacity-100'
+              >
+                {' '}
+                National Heritage Board{' '}
+              </Link>
+              <span className='opacity-80'>, Honour (Singapore) presents:</span>
             </p>
             <Slide direction='right' duration={1500} triggerOnce>
               <p className='text-[40px] sm:text-[50px] sm:text-left text-center leading-[45px] sm:leading-[60px] tracking-wide capitalize font-semibold text-white-main'>
-                The Tanglin Halt Stories:
+                The Tanglin Halt Stories
               </p>
             </Slide>
 
