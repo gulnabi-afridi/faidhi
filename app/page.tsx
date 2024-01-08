@@ -42,39 +42,11 @@ export default function Home() {
           );
         })}
       </div>
-      {/* body 2 ==========> */}
-      <SectionCard
-        img={sectionsData[1].image}
-        title={sectionsData[1].title}
-        des={sectionsData[1].subTitle}
-        secIndex={2}
-      />
-      {/* body 3 ==========> */}
-      <SectionCard
-        img={sectionsData[2].image}
-        title={sectionsData[2].title}
-        des={sectionsData[2].subTitle}
-        secIndex={3}
-      />
     </>
   );
 }
 
 const sectionsData = [
-  {
-    image: '/assets/sec1.png',
-    title: 'Unearthing Human Stories',
-    subTitle: [
-      'Delve into the lives of residents who weathered tumultuous times and progressed alongside the evolving landscape of Singapore.',
-    ],
-  },
-  {
-    image: '/assets/sec3.png',
-    title: 'Before Memories Fade',
-    subTitle: [
-      'To preserve the stories and spirit of the people who called Tanglin Halt home.',
-    ],
-  },
   {
     image: '/assets/sec2.jpg',
     title: 'The Honour Film Initiative',

@@ -7,61 +7,66 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <div>
-      <div className='w-full h-[calc(100vh-0px)] bg-[url(/assets/sec.png)] bg-cover bg-no-repeat bg-center relative'>
-        <div className='absolute inset-0 bg-black bg-opacity-50'></div>
-        <Wrapper style='h-full'>
-          {/* text on image */}
-          <Fade
-            duration={1500}
-            delay={500}
-            triggerOnce
-            className='flex justify-start h-full items-center'
-          >
-            <div className='flex flex-col gap-4 justify-center h-full items-start z-40 w-full max-w-[900px]'>
-              {/* logos */}
-              <Zoom duration={1000} triggerOnce>
-                <div className='w-full flex justify-center sm:justify-start items-center'>
-                  {logos.map((item, index) => (
-                    <Link
-                      href={item.path}
-                      target='blank'
-                      key={index}
-                      className={`${
-                        index === 1
-                          ? 'w-[180px] sm:w-[250px] h-[110px] sm:h-[150px] -mt-4 sm:-mt-8'
-                          : 'w-[80px] sm:w-[110px] h-[80px] sm:h-[100px] opacity-60'
-                      } relative`}
-                    >
-                      <Image
-                        src={item.img}
-                        fill
-                        className='object-fill hover:opacity-80'
-                        alt=''
-                      />
-                    </Link>
-                  ))}
-                </div>
-              </Zoom>
+    <div className='w-full h-[calc(100vh-0px)] bg-[url(/assets/sec.png)] bg-cover bg-no-repeat bg-center relative'>
+      <div className='absolute inset-0 bg-black bg-opacity-50'></div>
+      <Wrapper style='h-full'>
+        {/* Text on image */}
+        <Fade
+          duration={1500}
+          delay={500}
+          triggerOnce
+          className='flex justify-start h-full items-center'
+        >
+          <div className='flex flex-col gap-4 justify-center h-full items-start z-40 w-full max-w-[900px]'>
+            {/* Logos */}
+            <Zoom duration={1000} triggerOnce className='w-full'>
+              <div className='w-full flex justify-center sm:justify-start items-center'>
+                {logos.map((item, index) => (
+                  <Link
+                    href={item.path}
+                    target='blank'
+                    key={index}
+                    className={`relative hover:opacity-80 ${
+                      index === 1
+                        ? 'w-[180px] sm:w-[250px] h-[110px] sm:h-[150px] -mt-4 sm:-mt-8'
+                        : 'w-[80px] sm:w-[110px] h-[80px] sm:h-[100px] opacity-60'
+                    }`}
+                  >
+                    <Image src={item.img} fill alt='' className='object-fill' />
+                  </Link>
+                ))}
+              </div>
+            </Zoom>
 
-              <Slide direction='right' duration={1500} triggerOnce>
-                <p className='text-[50px] sm:text-left text-center leading-[60px] tracking-wide capitalize font-semibold text-white-main'>
-                  The Tanglin Halt Stories
-                </p>
-              </Slide>
+            <Slide direction='right' duration={1500} triggerOnce>
+              <p className='text-[50px] sm:text-left text-center leading-[60px] tracking-wide capitalize font-semibold text-white-main'>
+                The Tanglin Halt Stories
+              </p>
+            </Slide>
 
-              <Slide direction='right' duration={1500} delay={500} triggerOnce>
-                <p className='text-white-main/90 sm:text-left text-center text-[22px] font-normal'>
-                  A disappearing neighbourhood set for redevelopment. Discover
-                  the untold stories of Tanglin Halt through four short films
-                  that capture the essence of honour, heritage, and resilient
-                  spirit that defines the community.
+            <Slide direction='right' duration={1500} delay={500} triggerOnce>
+              <div className='w-full flex flex-col gap-2 sm:gap-3'>
+                <p className='text-white-main/90 sm:text-left leading-[26px] sm:leading-[30px] text-center text-[16px] sm:text-[21px] font-normal'>
+                  Discover the untold stories of the historic Tanglin Halt
+                  neighbourhood. This series seeks to preserve the memories and
+                  the bonds of the residents who call this place home. Join us
+                  as we delve into the lives of the residents who weathered
+                  tumultuous times and progressed alongside the evolving
+                  landscape of Singapore.
                 </p>
-              </Slide>
-            </div>
-          </Fade>
-        </Wrapper>
-      </div>
+                <p className='text-white-main/90 sm:text-left leading-[26px] sm:leading-[30px] text-center text-[16px] sm:text-[21px] font-normal'>
+                  Though the lens of our local filmmakers with a unique
+                  storytelling approach, these short films captures the essence
+                  of community and friendship, respect and honour, grit and
+                  resilience, and the values that define us as Singaporeans -
+                  set against the backdrop of the iconic Tanglin Halt
+                  neighbourhood.
+                </p>
+              </div>
+            </Slide>
+          </div>
+        </Fade>
+      </Wrapper>
     </div>
   );
 };

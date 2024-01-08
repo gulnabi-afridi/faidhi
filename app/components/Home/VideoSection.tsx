@@ -23,7 +23,7 @@ const VideoSection = ({ video, title, des, index }: Props) => {
             <Zoom
               duration={1000}
               triggerOnce
-              className={`${isEvenSection ? 'order-1' : 'order-2'}`}
+              className={`${isEvenSection ? 'order-2' : 'order-1'}`}
             >
               <div className='w-full h-[200px] sm:h-[300px] md:h-[280px] lg:h-[330px]'>
                 <iframe
@@ -41,7 +41,7 @@ const VideoSection = ({ video, title, des, index }: Props) => {
               direction={isEvenSection ? 'left' : 'right'}
               duration={1500}
               triggerOnce
-              className={`${isEvenSection ? 'order-2' : 'order-1'}`}
+              className={`${isEvenSection ? 'order-1' : 'order-2'}`}
             >
               <div className='flex flex-col gap-1 items-start'>
                 <p className='text-[18px] sm:text-[24px] text-white-main font-medium md:font-semibold'>
