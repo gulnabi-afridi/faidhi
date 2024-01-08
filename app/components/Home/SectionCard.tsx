@@ -38,7 +38,7 @@ const SectionCard = ({ img, title, des, secIndex }: Props) => {
           </Zoom>
           <div
             className={`w-full flex flex-col justify-center items-start gap-3 sm:gap-6 ${
-              isEvenSection ? 'order-1' : 'order-2'
+              isEvenSection ? 'order-1' : 'order-2Pse'
             }`}
           >
             <Slide duration={1500} triggerOnce direction='right'>

@@ -22,7 +22,7 @@ export default function Home() {
         })}
       </div>
       {/* videos portion 2 ------------>  */}
-      <div className='w-full grid gap-4 sm:gap-8 grid-cols-1  '>
+      <div className='w-full grid gap-4 sm:gap-8 grid-cols-1 py-8 md:py-16 '>
         {videoPortion2.map((item, index) => {
           return (
             <VideoSection

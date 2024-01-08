@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Wrapper from '../shared/ComponentWrapper/ComponentWrapper';
-import { Fade, Slide, Zoom } from 'react-awesome-reveal';
+import { Fade, Slide, Zoom, Bounce } from 'react-awesome-reveal';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,33 +10,34 @@ const Hero = () => {
     <div className='w-full h-[calc(100vh-0px)] bg-[url(/assets/sec.png)] bg-cover bg-no-repeat bg-center relative'>
       <div className='absolute inset-0 bg-black bg-opacity-50'></div>
       <Wrapper style='h-full'>
-        {/* Text on image */}
+        {/* Animated Text and Image */}
         <Fade
           duration={1500}
           delay={500}
           triggerOnce
           className='flex justify-start h-full items-center'
         >
-          <div className='flex flex-col gap-4 justify-center h-full items-start z-40 w-full max-w-[900px]'>
-            {/* Logos */}
-            <Zoom duration={1000} triggerOnce className='w-full'>
+          <div className='flex flex-col gap-3 justify-center h-full items-start z-40 w-full max-w-[900px]'>
+            {/* Animated Logos */}
+            <Bounce duration={2000} triggerOnce className='w-full'>
               <div className='w-full flex justify-center sm:justify-start items-center'>
                 {logos.map((item, index) => (
                   <Link
                     href={item.path}
                     target='blank'
                     key={index}
-                    className={`relative hover:opacity-80 ${
+                    className={`relative hover:scale-110 transition-transform duration-300 ${
                       index === 1
-                        ? 'w-[180px] sm:w-[250px] h-[110px] sm:h-[150px] -mt-4 sm:-mt-8'
-                        : 'w-[80px] sm:w-[110px] h-[80px] sm:h-[100px] opacity-60'
+                        ? 'w-[180px] sm:w-[230px] h-[110px] sm:h-[120px] -mt-2 sm:-mt-6'
+                        : 'w-[80px] sm:w-[80px] h-[80px] sm:h-[90px] opacity-60'
                     }`}
                   >
                     <Image src={item.img} fill alt='' className='object-fill' />
                   </Link>
                 ))}
               </div>
-            </Zoom>
+            </Bounce>
+            {/* Text with Fade and Slide animations */}
             <p className='text-white-main text-[22px] sm:text-[26px] sm:text-left text-center leading-[30px] sm:leading-[36px] font-medium opacity-80'>
               With support from the National Heritage Board, Honour (Singapore)
               presents:
@@ -47,7 +48,7 @@ const Hero = () => {
               </p>
             </Slide>
 
-            <Slide direction='right' duration={1500} delay={500} triggerOnce>
+            <Zoom duration={2000} delay={1000} triggerOnce>
               <div className='w-full flex flex-col gap-2 sm:gap-3'>
                 <p className='text-white-main/90 sm:text-left leading-[26px] sm:leading-[30px] text-center text-[16px] sm:text-[21px] font-normal'>
                   Discover the untold stories of the historic Tanglin Halt
@@ -58,15 +59,15 @@ const Hero = () => {
                   landscape of Singapore.
                 </p>
                 <p className='text-white-main/90 sm:text-left leading-[26px] sm:leading-[30px] text-center text-[16px] sm:text-[21px] font-normal'>
-                  Though the lens of our local filmmakers with a unique
-                  storytelling approach, these short films captures the essence
+                  Through the lens of our local filmmakers with a unique
+                  storytelling approach, these short films capture the essence
                   of community and friendship, respect and honour, grit and
                   resilience, and the values that define us as Singaporeans -
                   set against the backdrop of the iconic Tanglin Halt
                   neighbourhood.
                 </p>
               </div>
-            </Slide>
+            </Zoom>
           </div>
         </Fade>
       </Wrapper>
